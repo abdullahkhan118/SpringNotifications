@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.net.URI
 
 plugins {
 	id("org.springframework.boot") version "3.2.0"
@@ -21,6 +22,7 @@ java {
 
 repositories {
 	mavenCentral()
+	maven { url = URI.create("https://jitpack.io") }
 }
 
 dependencies {
@@ -28,6 +30,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("com.google.firebase:firebase-admin:9.2.0")
+	implementation("com.github.abdullahkhan118:KotlinExtensions:1.0.8")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
@@ -57,41 +60,3 @@ afterEvaluate {
 		}
 	}
 }
-
-//
-//plugins {
-//	id("java")
-//	id("org.springframework.boot") version "3.1.5"
-//	id("io.spring.dependency-management")
-//	kotlin("jvm")
-//	kotlin("plugin.spring")
-//	kotlin("kapt")
-//}
-//
-//group = "com.horux"
-//version = "0.0.1-SNAPSHOT"
-//
-//java {
-//	sourceCompatibility = JavaVersion.VERSION_17
-//}
-//
-//configurations {
-//	compileOnly {
-//		extendsFrom(configurations.annotationProcessor.get())
-//	}
-//}
-//
-//repositories {
-//	mavenCentral()
-//}
-//
-//dependencies {
-//	implementation("org.springframework.boot:spring-boot-starter-web")
-//	// https://mvnrepository.com/artifact/com.google.firebase/firebase-admin
-//	implementation("com.google.firebase:firebase-admin:9.2.0")
-//
-//}
-//
-//tasks.test {
-//	useJUnitPlatform()
-//}
