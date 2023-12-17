@@ -14,7 +14,7 @@ apply {
 }
 
 group = "com.github.abdullahkhan118"
-version = "1.0.0"
+version = "1.0.1"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_21
@@ -52,7 +52,7 @@ afterEvaluate {
 				from(components["java"])
 				groupId = "com.github.abdullahkhan118"
 				artifactId = "kotlin.notifications"
-				version = "1.0.0"
+				version = "1.0.1"
 			}
 		}
 		repositories {
