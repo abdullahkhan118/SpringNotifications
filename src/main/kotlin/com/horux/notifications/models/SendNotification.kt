@@ -1,9 +1,6 @@
 package com.horux.notifications.models
-
-import com.google.firebase.messaging.Notification
-
 data class SendNotification(
-    val notification: Notification,
+    val notification: NotificationBody,
     val registrationTokens: Array<String>
 ) {
     override fun equals(other: Any?): Boolean {
